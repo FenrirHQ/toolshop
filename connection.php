@@ -1,6 +1,6 @@
 <?php
 
-$source = 'mysql:host=tsuts.tskoli.is;dbname=1612972679_picturebase';
+$source = 'mysql:host=tsuts.tskoli.is;dbname=1612972679_toolshop';
 $user = '1612972679';
 $passw = 'mypassword';
 

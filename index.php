@@ -1,5 +1,7 @@
 <?php
+    session_start();
     require_once 'connection.php';
+    require_once 'procedures.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,10 +43,10 @@
                                 <li>
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                            <form class="form" role="form" method="post" action="" accept-charset="UTF-8" id="login-nav">
                                                 <div class="form-group">
-                                                    <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                                                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                                                    <label class="sr-only" for="username">Username</label>
+                                                    <input type="username" class="form-control" id="log_username" placeholder="Username" required>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="sr-only" for="exampleInputPassword2">Password</label>
@@ -90,38 +92,41 @@
     <!-- Page Content -->
     <div class="container">
         <!-- Modal -->
-        <div class="modal fade" id="myModal" role="dialog">
-            <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Register</h4>
+        <form method="post" action=""> 
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Register</h4>
+                        </div>
+                            <div class="modal-body">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="firstname" id="reg_firstName" placeholder="First Name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="lastname" id="reg_lastName" placeholder="Last Name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" name="email" id="reg_email" placeholder="Email Address" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="username" id="reg_username" placeholder="Username" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="password" id="reg_password" placeholder="Password" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="passwordConfirm" id="reg_passwordConfirm" placeholder="Confirm Password" required>
+                                    </div>
+                            </div>
+                            <div class="modal-footer">
+                        <button name="registerUser" type="submit" id="registerUser" value="register" class="btn btn-primary btn-block" data-dismiss="modal">Sign Up</button>
                     </div>
-                <div class="modal-body">
-                    <form class="form" role="form" method="post" action="register" accept-charset="UTF-8" id="register-nav">
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="firstname" id="reg_firstName" placeholder="First Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="lastname" id="reg_lastName" placeholder="Last Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" name="email" id="reg_email" placeholder="Email Address" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="username" id="reg_username" placeholder="Username" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="password" id="reg_password" placeholder="Password" required>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary btn-block" data-dismiss="modal">Sign Up</button>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
     <div class="row">
 

@@ -1,0 +1,11 @@
+21.11.2016 (Mánudagur)
+Settum upp Database ásamt Stored Procedures, Server tengingu og byrjuðum að kóða vefsíðu.
+
+23.11.2016 (Miðvikudagur)
+Breytti töflum í database og setti templates á síðuna ásamt tengingum.
+
+25.11.2016 (Föstudagur)
+Haldið var áfram með vefsíðu, byrjað á php vinnslu (að skila út frá database) og rætt um innskráningu. Bætt var líka við í database.
+
+28.11.2016 (Mánudagur)
+Halldór fór að vinna með database (stored procedures ásamt töflum) og Adam hjálpaði smá við database og skapaði beinagrind fyrir login system + tengdi gögn úr database yfir á síðuna með html + php.
